@@ -17,34 +17,152 @@ const { title } = Astro.props;
 		<title>{title}</title>
 	</head>
 	<body>
-		<slot />
+		<!-- <slot /> -->
+		 <header>
+			<div class="container">
+				<menu class="supor">
+					<img src="https://community.akamai.steamstatic.com/public/shared/images/header/logo_steam.svg?t=962016" alt="">
+				    <li><a href="#">Tienda</li></a>
+					<li><a href="#">Comunidad</li></a>
+					<li><a href="#">Acerca De</li></a>
+					<li><a href="#">Soporte</li></a>
+				</menu>
+				<div class="menu-right">
+				<a href="#" class="btn-download"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+					<path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
+				  </svg>
+				  Instalar Steam</a>
+				
+				  <a href="#">Iniciar Sesion  </a>
+				  |
+				  <a href="#">Idioma</a>
+
+				</div>
+			</div>			
+		 </header>
+
+		 <div class="banner">
+		 </div>
+		 
+		 <div class="banner-2 container">
+			<div class="left-banner">
+			</div>
+		 </div>
+
+		 <div class="ofertas">
+		 </div>
+		 
 	</body>
 </html>
-<style is:global>
-	:root {
-		--accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
-		--accent-dark: 49, 10, 101;
-		--accent-gradient: linear-gradient(
-			45deg,
-			rgb(var(--accent)),
-			rgb(var(--accent-light)) 30%,
-			rgb(222, 26, 26) 60%
-		);
+<style>
+
+	html body{
+	    padding:0;
+		margin: 0;	
 	}
-	html {
-		font-family: system-ui, sans-serif;
-		background: #13151a;
+
+	header{
+		height: 80px;	
+		background-color: #161d24;
 	}
-	code {
-		font-family:
-			Menlo,
-			Monaco,
-			Lucida Console,
-			Liberation Mono,
-			DejaVu Sans Mono,
-			Bitstream Vera Sans Mono,
-			Courier New,
-			monospace;
+
+	.container{
+		max-width: 1200px;
+		margin: 0 auto;
 	}
+
+	.supor{
+		height: 80px;
+		width: 60%;
+		align-items: center;
+		float: left;
+		color: #dbdbdb;
+		font-family: sans-serif;
+		text-transform: uppercase;
+	}
+
+	.supor img{
+		width: 160px;
+	}
+
+	.supor li{
+		list-style: none;
+		display: inline-block;
+		padding: 10px;
+		text-decoration: none;
+		font-size: 20px;
+	}
+
+	.supor a{
+		color:#dbdbdb;
+		text-decoration: none;
+	}
+
+	.supor a:hover{
+        color: #fff;
+	}
+
+	.menu-right{
+		float: left;
+		width: 30%;		
+		margin-top: 8px;
+		color:#dbdbdb;
+		font-family: sans-serif;
+	}
+
+	.btn-download{
+		color: white;
+		background-color: rgb(24, 170, 24);
+		display: inline-flex;
+		padding: 6px 12px;
+		font-family: sans-serif;
+		text-decoration: none;
+		align-items: center;
+		gap: 8px;
+	}
+
+	.btn-download:hover{
+		background-color: green;
+	}
+
+	.btn-download svg{
+		width: 18px;
+	}
+
+	.menu-right a{
+		color: #dbdbdb;
+		text-decoration: none;
+		margin: 0 6px;
+	}
+
+	/* fin cabecera */
+
+	/* inicio */
+	.banner{
+		background-color: rgb(187, 123, 4);
+		height: 300px;
+	}
+
+	.banner-2{
+		position: relative;
+		background-color: purple;
+		height: 240px;
+	}
+
+	.left-banner{
+		background-color: pink;
+		width: 160px;
+		height: 580px;
+		position: absolute;
+		top:0;
+		z-index: 10;
+		left: -160px;
+		position: sticky;
+	}
+	
+	.ofertas{
+		background-color: rgb(32, 133, 133);
+		height: 1200px;
+	}
+
 </style>
