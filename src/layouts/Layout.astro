@@ -18,60 +18,109 @@ const { title } = Astro.props;
 	</head>
 	<body>
 		<!-- <slot /> -->
-		 <header>
-			<div class="container">
-				<menu class="supor">
-					<img src="https://community.akamai.steamstatic.com/public/shared/images/header/logo_steam.svg?t=962016" alt="">
-				    <li><a href="#">Tienda</li></a>
-					<li><a href="#">Comunidad</li></a>
-					<li><a href="#">Acerca De</li></a>
-					<li><a href="#">Soporte</li></a>
+		<header>
+			<div class="container  max-w[1200px] mx-auto">
+				<menu class="supor h[80px] w[60%] align-middle float-left font-sans uppercase items-center ">
+					<img
+						src="https://community.akamai.steamstatic.com/public/shared/images/header/logo_steam.svg?t=962016"
+						alt=""
+					/>
+					<li><a href="#">Tienda</a></li>
+					<li><a href="#">Comunidad</a></li>
+					<li><a href="#">Acerca De</a></li>
+					<li><a href="#">Soporte</a></li>
 				</menu>
 				<div class="menu-right">
-				<a href="#" class="btn-download"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-					<path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
-				  </svg>
-				  Instalar Steam</a>
-				
-				  <a href="#">Iniciar Sesion  </a>
-				  |
-				  <a href="#">Idioma</a>
+					<a href="#" class="btn-download"
+						><svg
+							xmlns="http://www.w3.org/2000/svg"
+							fill="none"
+							viewBox="0 0 24 24"
+							stroke-width="1.5"
+							stroke="currentColor"
+							class="size-6"
+						>
+							<path
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3"
+							></path>
+						</svg>
+						Instalar Steam</a
+					>
 
+					<a href="#">Iniciar Sesion </a>
+					|
+					<a href="#">Idioma</a>
 				</div>
-			</div>			
-		 </header>
-
-		 <div class="banner">
-		 </div>
-		 
-		 <div class="banner-2 container">
-			<div class="left-banner">
 			</div>
-		 </div>
+		</header>
 
-		 <div class="ofertas">
-		 </div>
-		 
+		<div class="banner"></div>
+
+		<div class="banner-2 container  max-w[1200px] mx-auto">
+			<div class="left-banner"></div>
+		</div>
+
+		<div class="ofertas"></div>
+
+		<body>
+			<div
+				class="hover:cursor-pointer duration-400 transition-colors hover:bg-red-950 rounded-md py-3 px-3 text-white inline-flex bg-blue-600"
+			>
+			<svg
+					xmlns="http://www.w3.org/2000/svg"
+					fill="none"
+					viewBox="0 0 24 24"
+					stroke-Width={1.5}
+					stroke="currentColor"
+					class="size-4 mr-1 mt-1 group-hover:animate-spin"
+				>
+					<path
+						stroke-Linecap="round"
+						stroke-Linejoin="round"
+						d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0 3.181 3.183a8.25 8.25 0 0 0 13.803-3.7M4.031 9.865a8.25 8.25 0 0 1 13.803-3.7l3.181 3.182m0-4.991v4.99"
+					></path>
+				</svg>
+			
+				Presioname
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					fill="none"
+					viewBox="0 0 24 24"
+					stroke-Width={1.5}
+					stroke="currentColor"
+					class="size-5 ml-2 mt-[4.5px]"
+				>
+					<path
+						stroke-Linecap="round"
+						stroke-Linejoin="round"
+						d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"></path>
+				</svg>
+
+				
+				
+			</div>
+		</body>
 	</body>
 </html>
 <style>
-
-	html body{
-	    padding:0;
-		margin: 0;	
+	html body {
+		padding: 0;
+		margin: 0;
 	}
 
-	header{
-		height: 80px;	
+	header {
+		height: 80px;
 		background-color: #161d24;
 	}
 
-	.container{
+	/* .container {
 		max-width: 1200px;
 		margin: 0 auto;
-	}
+	} */
 
-	.supor{
+	/* .supor {
 		height: 80px;
 		width: 60%;
 		align-items: center;
@@ -79,13 +128,13 @@ const { title } = Astro.props;
 		color: #dbdbdb;
 		font-family: sans-serif;
 		text-transform: uppercase;
-	}
+	} */
 
-	.supor img{
+	.supor img {
 		width: 160px;
 	}
 
-	.supor li{
+	.supor li {
 		list-style: none;
 		display: inline-block;
 		padding: 10px;
@@ -93,24 +142,24 @@ const { title } = Astro.props;
 		font-size: 20px;
 	}
 
-	.supor a{
-		color:#dbdbdb;
+	.supor a {
+		color: #dbdbdb;
 		text-decoration: none;
 	}
 
-	.supor a:hover{
-        color: #fff;
+	.supor a:hover {
+		color: #fff;
 	}
 
-	.menu-right{
+	.menu-right {
 		float: left;
-		width: 30%;		
+		width: 30%;
 		margin-top: 8px;
-		color:#dbdbdb;
+		color: #dbdbdb;
 		font-family: sans-serif;
 	}
 
-	.btn-download{
+	.btn-download {
 		color: white;
 		background-color: rgb(24, 170, 24);
 		display: inline-flex;
@@ -121,15 +170,15 @@ const { title } = Astro.props;
 		gap: 8px;
 	}
 
-	.btn-download:hover{
+	.btn-download:hover {
 		background-color: green;
 	}
 
-	.btn-download svg{
+	.btn-download svg {
 		width: 18px;
 	}
 
-	.menu-right a{
+	.menu-right a {
 		color: #dbdbdb;
 		text-decoration: none;
 		margin: 0 6px;
@@ -138,31 +187,31 @@ const { title } = Astro.props;
 	/* fin cabecera */
 
 	/* inicio */
-	.banner{
+	.banner {
 		background-color: rgb(187, 123, 4);
 		height: 300px;
 	}
 
-	.banner-2{
+	.banner-2 {
 		position: relative;
 		background-color: purple;
 		height: 240px;
 	}
 
-	.left-banner{
+	.left-banner {
 		background-color: pink;
 		width: 160px;
 		height: 580px;
 		position: absolute;
-		top:0;
+		top: 0;
 		z-index: 10;
 		left: -160px;
 		position: sticky;
+		margin-right: 200px;
 	}
-	
-	.ofertas{
+
+	.ofertas {
 		background-color: rgb(32, 133, 133);
 		height: 1200px;
 	}
-
 </style>
