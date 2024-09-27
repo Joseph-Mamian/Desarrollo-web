@@ -18,21 +18,22 @@ const { title } = Astro.props;
 	</head>
 	<body>
 		<!-- <slot /> -->
-		<header>
+		<header class="header h-[80px] bg-[#161d24]">
 			<div class="container  max-w[1200px] mx-auto">
-				<menu class="supor h[80px] w[60%] align-middle float-left font-sans uppercase items-center ">
-					<img
+				<menu class="supor h[80px] w[60%] align-middle float-left font-sans uppercase inline-flex pl-[200px] p-6">
+					<img class=" w-[160px]"
 						src="https://community.akamai.steamstatic.com/public/shared/images/header/logo_steam.svg?t=962016"
 						alt=""
 					/>
-					<li><a href="#">Tienda</a></li>
-					<li><a href="#">Comunidad</a></li>
-					<li><a href="#">Acerca De</a></li>
-					<li><a href="#">Soporte</a></li>
+					<li><a href="#" class=" px-3 text-[#dbdbdb] text-[21px] hover:text-[#ffff] hover:underline font-semibold">Tienda</a></li>
+					<li><a href="#" class=" px-3 text-[#dbdbdb] text-[21px] hover:text-[#ffff] hover:underline font-semibold">Comunidad</a></li>
+					<li><a href="#" class=" px-3 text-[#dbdbdb] text-[21px] hover:text-[#ffff] hover:underline font-semibold">Acerca De</a></li>
+					<li><a href="#" class=" px-3 text-[#dbdbdb] text-[21px] hover:text-[#ffff] hover:underline font-semibold">Soporte</a></li>
 				</menu>
-				<div class="menu-right">
-					<a href="#" class="btn-download"
-						><svg
+
+				<div class="menu-right float-left flex- pl-[100px] px-3  text-[#dbdbdb] mt-[8px] font-sans font-light ">
+					<a href="#" class="btn-download bg-[#5C7E10] text[#dbdbdb] inline-flex px-[12px] py-[6px] font-sans items-center gap-[8px] font-normal hover:bg-[#678d14]" 
+						><svg 
 							xmlns="http://www.w3.org/2000/svg"
 							fill="none"
 							viewBox="0 0 24 24"
@@ -49,14 +50,24 @@ const { title } = Astro.props;
 						Instalar Steam</a
 					>
 
-					<a href="#">Iniciar Sesion </a>
+					<a href="#" class=" text-[#dbdbdb] my-[6px] hover:text-[#fff]">Iniciar Sesion </a>
 					|
-					<a href="#">Idioma</a>
+					<a href="#" class=" text-[#dbdbdb] my-[6px] hover:text-[#fff]">Idioma</a>
 				</div>
 			</div>
 		</header>
 
-		<div class="banner"></div>
+		<!-- <div class="opciones underline "> 
+
+			<li class="fila decoration-neutral-500">Tu Tienda</li>
+			<li>Nuevo y Destacable</li>
+			<li>Categorias</li>
+			<li>Tienda de Puntos</li>
+			<li>Noticias</li>
+			<li>Laboratorios</li>
+		</div> -->
+
+		<div class="banner my-1 h-auto"><img src="/banner steam.png " alt=""></div>
 
 		<div class="banner-2 container  max-w[1200px] mx-auto">
 			<div class="left-banner"></div>
@@ -68,7 +79,7 @@ const { title } = Astro.props;
 			<div
 				class="hover:cursor-pointer duration-400 transition-colors hover:bg-red-950 rounded-md py-3 px-3 text-white inline-flex bg-blue-600"
 			>
-			<svg
+			<svg class="w-[18px]"
 					xmlns="http://www.w3.org/2000/svg"
 					fill="none"
 					viewBox="0 0 24 24"
@@ -105,92 +116,60 @@ const { title } = Astro.props;
 	</body>
 </html>
 <style>
-	html body {
-		padding: 0;
-		margin: 0;
-	}
 
-	header {
-		height: 80px;
-		background-color: #161d24;
-	}
-
-	/* .container {
-		max-width: 1200px;
-		margin: 0 auto;
-	} */
-
-	/* .supor {
-		height: 80px;
-		width: 60%;
-		align-items: center;
-		float: left;
-		color: #dbdbdb;
-		font-family: sans-serif;
-		text-transform: uppercase;
-	} */
-
-	.supor img {
-		width: 160px;
-	}
-
-	.supor li {
+	/* .supor li {
 		list-style: none;
 		display: inline-block;
 		padding: 10px;
 		text-decoration: none;
 		font-size: 20px;
-	}
+	} */
 
-	.supor a {
+	/* .supor a {
 		color: #dbdbdb;
-		text-decoration: none;
+		
 	}
 
 	.supor a:hover {
 		color: #fff;
-	}
+	} */
 
-	.menu-right {
+	/* .menu-right {
 		float: left;
 		width: 30%;
 		margin-top: 8px;
 		color: #dbdbdb;
 		font-family: sans-serif;
-	}
+	} */
 
-	.btn-download {
+	/* .btn-download {
 		color: white;
-		background-color: rgb(24, 170, 24);
+		background-color: #5C7E10;
 		display: inline-flex;
 		padding: 6px 12px;
 		font-family: sans-serif;
 		text-decoration: none;
 		align-items: center;
 		gap: 8px;
-	}
+	} */
 
-	.btn-download:hover {
-		background-color: green;
-	}
+	/* .btn-download:hover {
+		background-color: #678d14;
+	} */
 
-	.btn-download svg {
+	/* .btn-download svg {
 		width: 18px;
-	}
+	} */
 
-	.menu-right a {
+	/* .menu-right a {
 		color: #dbdbdb;
 		text-decoration: none;
 		margin: 0 6px;
-	}
+	} */
 
 	/* fin cabecera */
 
 	/* inicio */
-	.banner {
-		background-color: rgb(187, 123, 4);
-		height: 300px;
-	}
 
 	.banner-2 {
 		position: relative;
